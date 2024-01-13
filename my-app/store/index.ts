@@ -30,7 +30,7 @@ const appReducer = combineReducers({
   [baseApi.reducerPath]: baseApi.reducer,
 });
 
-const rootReducer = (state: any, action: any): any => {
+export const rootReducer = (state: any, action: any): any => {
   // Clear all data in redux store to initial.
   if (action.type === "auth/logout") {
     state = undefined;
