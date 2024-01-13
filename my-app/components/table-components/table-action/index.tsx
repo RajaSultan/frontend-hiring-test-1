@@ -10,7 +10,7 @@ interface TableActionProps {
   selectButtonProps?: ButtonProps;
   menuProps?: MenuProps;
   placeholder?: string;
-  buttonStyles?: React.CSSProperties; 
+  buttonStyles?: React.CSSProperties;
   iconStyles?: React.CSSProperties;
 }
 
@@ -41,10 +41,7 @@ export function TableAction({
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
         sx={(theme: Theme) => ({
-          color:
-            theme.palette.mode === "light"
-              ? theme.palette.neutral[600]
-              : theme.palette.neutral[50],
+          color: "gray",
           border: "1px solid #D0D5DD",
           borderRadius: 1.2,
           display: "flex",
@@ -58,11 +55,8 @@ export function TableAction({
         {placeholder || "select"}
         <KeyboardArrowDownIcon
           sx={(theme: Theme) => ({
-            color:
-              theme.palette.mode === "light"
-                ? theme.palette.neutral[600]
-                : theme.palette.neutral[50],
-                ...iconStyles,
+            color: "gray",
+            ...iconStyles,
           })}
         />
       </Button>
